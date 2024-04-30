@@ -2,8 +2,8 @@ name: Generate and publish release
 
 on:
   workflow_dispatch: {}
-  # schedule:
-    # - cron: '0 0 * * *'
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   publish:
@@ -26,6 +26,7 @@ jobs:
           LAST_PUBLISHED_VERSION: ${{ vars.LAST_PUBLISHED_VERSION }}
         run: bun src/ci.ts
       - name: Update variable
+        if: ${{ steps.build.outputs.latest }} != ${{ vars.LAST_PUBLISHED_VERSION }}
         env: 
           GITHUB_TOKEN: ${{ secrets.BOT_PAT }}
-        run: gh variable set LAST_PUBLISHED_VERSION --body "${{ steps.build.outputs.version }}"
+        run: gh variable set LAST_PUBLISHED_VERSION --body "${{ steps.build.outputs.latest }}"

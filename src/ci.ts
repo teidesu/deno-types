@@ -32,7 +32,7 @@ if (latest === lastPublished) {
 await generateNpmPackage({
     commit: await resolveGithubCommit(DENO_REPO, latest),
     outDir: 'out',
-    version: latest,
+    version: latest.replace(/^v/, ''),
 })
 
 cpSync('README.md', 'out/README.md')
