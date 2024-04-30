@@ -1,0 +1,15 @@
+{
+    "name": "deno-types",
+    "type": "module",
+    "module": "index.ts",
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@antfu/eslint-config": "^2.16.0",
+        "eager-async-pool": "^1.0.0"
+    },
+    "devDependencies": {
+        "bun-types": "1.1.6"
+    }
+}
