@@ -82,3 +82,11 @@ since the structure may change over time. for example, for Deno's `fetch` API, y
 bun install
 bun run src/main.ts --ref main
 ```
+
+## license
+
+this repository itself is licensed under MIT license.
+
+the generated packages are licensed under the license stated at the beginning of each file,
+as some files are taken from the TypeScript repository (Apache-2.0) and some are taken from
+the Deno repository (MIT).
