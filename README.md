@@ -14,7 +14,7 @@ by putting the following in your `package.json`:
 ```json
 {
     "devDependencies": {
-        "@types/deno": "npm:@teidesu/deno-types@latest"
+        "@types/deno": "npm:@teidesu/deno-types@1.42.4"
     }
 }
 ```
