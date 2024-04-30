@@ -164,7 +164,12 @@ export async function generateNpmPackage(params: {
         name: '@teidesu/deno-types',
         version: params.version || `git-${params.commit}`,
         description: 'TypeScript definitions for Deno',
+        license: 'MIT',
         main: '',
+        repository: {
+            type: 'git',
+            url: 'https://github.com/teidesu/deno-types',
+        },
     }
 
     await fsp.writeFile(`${params.outDir}/package.json`, JSON.stringify(packageJson, null, 2))
