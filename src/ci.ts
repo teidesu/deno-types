@@ -40,7 +40,7 @@ cpSync('LICENSE', 'out/LICENSE')
 await downloadFile('https://raw.githubusercontent.com/microsoft/TypeScript/main/LICENSE.txt', 'out/LICENSE.typescript.txt')
 await downloadFile('https://raw.githubusercontent.com/denoland/deno/main/LICENSE.md', 'out/LICENSE.deno.md')
 
-execSync('npm publish --registry https://npm.tei.su --access public --tag latest -q', {
+execSync('npm publish --access public --tag latest -q', {
     stdio: 'inherit',
     cwd: 'out',
 })
