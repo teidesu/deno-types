@@ -1,7 +1,15 @@
+> [!CAUTION]
+> as of late 2024, deno started publishing official typings at [@types/deno](https://npmjs.org/package/@types/deno),
+> making this package obsolete and no longer supported. 
+
+original readme below
+
+---
 # deno-types
 
 [![NPM Version](https://img.shields.io/npm/v/%40teidesu%2Fdeno-types)](https://www.npmjs.com/package/@teidesu/deno-types)
 [![Generate and publish release](https://github.com/teidesu/deno-types/actions/workflows/publish.yaml/badge.svg)](https://github.com/teidesu/deno-types/actions/workflows/publish.yaml)
+
 
 due to the lack of properly packaged Deno types for `tsc`, this repository tries to fill that gap
 between the node.js ecosystem and the Deno runtime.
